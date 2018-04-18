@@ -1,0 +1,10 @@
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\bin\Debug\DataInsert.exe.config
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\bin\Debug\DataInsert.exe
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\bin\Debug\DataInsert.pdb
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.Form1.resources
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.Properties.Resources.resources
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.csproj.GenerateResource.cache
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.exe
+C:\Users\Andrew\Desktop\Class-CSharp\DataRetrieval\DataInsert\obj\Debug\DataInsert.pdb
