@@ -65,6 +65,42 @@ namespace DataInsert
 
         }
 
+        public bool UpdateSource(int SourceID, string SourceName, string SourceType, string SourceLink, string SourceDesc)
+        {
+            bool returnValue = false;
+
+            try
+            {
+                if (DBConnect())
+                {
+                    // Create new command for stored procedure.
+                    SqlCommand insertSourceCmd = new SqlCommand("spUpdateSource", sqlConn);
+                    insertSourceCmd.CommandType = CommandType.StoredProcedure;
+
+                    //SqlParameter outValue = new SqlParameter("@SourceID", SourceID);
+
+                    insertSourceCmd.Parameters.AddWithValue("@SourceID", SourceID);
+                    insertSourceCmd.Parameters.AddWithValue("@SourceName", SourceName);
+                    insertSourceCmd.Parameters.AddWithValue("@SourceType", SourceType);
+                    insertSourceCmd.Parameters.AddWithValue("@SourceLink", SourceLink);
+                    insertSourceCmd.Parameters.AddWithValue("@SourceDesc", SourceDesc);
+
+                    // Run command.
+                    insertSourceCmd.ExecuteNonQuery();
+
+                    returnValue = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                returnValue = false;
+                throw ex;
+            }
+
+            return returnValue;
+
+        }
+
         public bool InsertNewSource(string SourceName, string SourceType, string SourceLink, string SourceDesc, out int SourceID)
         {
             bool returnValue = false;
@@ -79,7 +115,7 @@ namespace DataInsert
                     SqlCommand insertSourceCmd = new SqlCommand("spInsertSource", sqlConn);
                     insertSourceCmd.CommandType = CommandType.StoredProcedure;
 
-                    SqlParameter outValue = new SqlParameter("@SourceID", SourceID);
+                    //SqlParameter outValue = new SqlParameter("@SourceID", SourceID);
                     
                     insertSourceCmd.Parameters.AddWithValue("@SourceName", SourceName);
                     insertSourceCmd.Parameters.AddWithValue("@SourceType", SourceType);

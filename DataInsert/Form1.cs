@@ -25,8 +25,16 @@ namespace DataInsert
 
             try
             {
-                dataWorks.InsertNewSource(txtName.Text, txtType.Text, txtLink.Text, txtDescription.Text, out sourceID);
-                txtID.Text = sourceID.ToString();
+                if (txtID.Text.Length == 0)
+                {
+                    dataWorks.InsertNewSource(txtName.Text, txtType.Text, txtLink.Text, txtDescription.Text, out sourceID);
+                    txtID.Text = sourceID.ToString();
+                }
+                else
+                {
+                    dataWorks.UpdateSource(int.Parse(txtID.Text), txtName.Text, txtType.Text, txtLink.Text, txtDescription.Text);
+                    MessageBox.Show("Done!");
+                }
             }
             catch (Exception ex)
             {
